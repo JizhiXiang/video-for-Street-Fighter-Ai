@@ -29,12 +29,12 @@ def make_env(game, state):
             use_restricted_actions=retro.Actions.FILTERED, 
             obs_type=retro.Observations.IMAGE
         )
-        env = StreetFighterCustomWrapper(env)
+        env = StreetFighterCustomWrapper(env,rendering=True)
         return env
     return _init
 
 game = "StreetFighterIISpecialChampionEdition-Genesis"
-state = "Champion.Level1.RyuVsGuile"
+state = "Champion.Level12.RyuVsBison"
 
 env = make_env(game, state)()
 env = Monitor(env, 'logs/')
@@ -52,7 +52,7 @@ for _ in range(num_episodes):
         # Note that if player wins but only has 0 HP left, the winning reward is still 0, so it won't be printed. 
         if reward != 0:
             total_reward += reward
-            print("Reward: {}, playerHP: {}, enemyHP:{}".format(reward, info['health'], info['enemy_health']))
+            print("Reward: {}, playerHP: {}, enemyHP:{}".format(reward, info['agent_hp'], info['enemy_hp']))
         env.render()
         # time.sleep(0.005)
 
