@@ -1,5 +1,6 @@
 # 说明
-本项目拷贝于[此处](https://github.com/linyiLYi/street-fighter-ai)，这里主要是提供一个简化的可运行版本，并且加以解释和指导，让初学者能参与其中。
+本项目拷贝于[此处](https://github.com/linyiLYi/street-fighter-ai)，这里主要是提供一个简化的可运行版本，并且加以解释和指导，让初学者能参与其中。   
+详细步骤可见[《格斗之王AI》使用指南](https://blog.csdn.net/GreatXiang888/article/details/132249665)
 
 # SFighterAI
 
